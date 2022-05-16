@@ -147,7 +147,7 @@ public abstract class LocalStoredPackUnit<I, O> implements Unit<Pack<I>, Pack<O>
 
     }
 
-    private void processAndSend(int start, int end) {
+    protected void processAndSend(int start, int end) {
         send(process(new Pack<I>(pool.subList(start, end), start)));
     }
 }
